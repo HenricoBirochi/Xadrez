@@ -1,12 +1,13 @@
 ﻿using System;
+using Tabuleiro;
 
-namespace XadrezConsole
+namespace XadrezConsole 
 {
     class Program
     {
         static void Main(string[] args)
         {
-
+            Posicao p
         }
     }
 }
