@@ -1,6 +1,6 @@
-﻿namespace Tabuleiro
+﻿namespace XadrezConsole.Entities
 {
-    internal class Posicao
+    public class Posicao
     {
         public int Linha {  get; set; }
         public int Coluna { get; set; }
