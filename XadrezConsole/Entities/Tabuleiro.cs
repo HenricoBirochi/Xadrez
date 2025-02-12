@@ -36,6 +36,17 @@ namespace XadrezConsole.Entities
             Pecas[pos.Linha, pos.Coluna] = p;
             p.Posicao = pos;
         }
+        public Peca RetirarPeca(Posicao pos)
+        {
+            if (AcessarPeca(pos) == null)
+            {
+                return null;
+            }
+            Peca aux = AcessarPeca(pos);
+            aux.Posicao = null;
+            Pecas[pos.Linha, pos.Coluna] = null;
+            return aux;
+        }
         public void ValidarPosicao(Posicao pos)
         {
             if (pos.Linha < 0 || pos.Linha > Linhas || pos.Coluna < 0 || pos.Coluna > Colunas)
