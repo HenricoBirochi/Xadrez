@@ -47,9 +47,17 @@ namespace XadrezConsole.Entities
             Pecas[pos.Linha, pos.Coluna] = null;
             return aux;
         }
-        public void ValidarPosicao(Posicao pos)
+        public bool PosicaoValida(Posicao pos)
         {
             if (pos.Linha < 0 || pos.Linha > Linhas || pos.Coluna < 0 || pos.Coluna > Colunas)
+            {
+                return false;
+            }
+            return true;
+        }
+        public void ValidarPosicao(Posicao pos)
+        {
+            if (!PosicaoValida(pos))
             {
                 throw new TabuleiroException("Posição inválida!");
             }

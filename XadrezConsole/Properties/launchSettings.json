@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "XadrezConsole": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}
